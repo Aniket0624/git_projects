@@ -1,0 +1,371 @@
+Microsoft Windows [Version 10.0.19023.1]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\anike>wsl
+^[[Caniket@ANIKET:/mnt/c/Users/anike$ touch git_drill_part_1.txt
+aniket@ANIKET:/mnt/c/Users/anike$ mkdir gitsample_project
+aniket@ANIKET:/mnt/c/Users/anike$ cd gitsample_project
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ touch x.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ touch b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ touch c.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add x.txt
+fatal: not a git repository (or any parent up to mount point /mnt)
+Stopping at filesystem boundary (GIT_DISCOVERY_ACROSS_FILESYSTEM not set).
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git init
+Initialized empty Git repository in /mnt/c/Users/anike/gitsample_project/.git/
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add x.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git b.txt
+git: 'b.txt' is not a git command. See 'git --help'.
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   b.txt
+        new file:   x.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        c.txt
+
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "Add a.txt and b.txt"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <aniket@ANIKET.localdomain>) not allowed
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+        new file:   b.txt
+        new file:   x.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        c.txt
+
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "Add a.txt and b.txt"
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: empty ident name (for <aniket@ANIKET.localdomain>) not allowed
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git config dasaniket11@gmail.com
+error: invalid key: dasaniket11@gmail.com
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git config --global user.email "dasaniket11@gmail.com"
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git config --global user.name "Aniket Das"
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ nano a.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ nano b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add a.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "Add a.txt and b.txt"
+[master (root-commit) 3c5d7b7] Add a.txt and b.txt
+ 3 files changed, 3 insertions(+)
+ create mode 100644 a.txt
+ create mode 100644 b.txt
+ create mode 100644 x.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        c.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git config --global user.email "aniket.das@mountblue.tech"
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git config --global user.name "Aniket Das"
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit
+On branch master
+Untracked files:
+        c.txt
+
+nothing added to commit but untracked files present
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+        c.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git log
+commit 3c5d7b776ebacc2dea58bab5877ddedc74b26bd2 (HEAD -> master)
+Author: Aniket Das <dasaniket11@gmail.com>
+Date:   Wed Nov 20 16:14:42 2019 +0530
+
+    Add a.txt and b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd ~/git
+-bash: cd: /home/aniket/git: No such file or directory
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd ~/.git
+-bash: cd: /home/aniket/.git: No such file or directory
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "done"
+On branch master
+Untracked files:
+        c.txt
+
+nothing added to commit but untracked files present
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git log
+commit 3c5d7b776ebacc2dea58bab5877ddedc74b26bd2 (HEAD -> master)
+Author: Aniket Das <dasaniket11@gmail.com>
+Date:   Wed Nov 20 16:14:42 2019 +0530
+
+    Add a.txt and b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add a.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "done"
+On branch master
+Untracked files:
+        c.txt
+
+nothing added to commit but untracked files present
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git log
+commit 3c5d7b776ebacc2dea58bab5877ddedc74b26bd2 (HEAD -> master)
+Author: Aniket Das <dasaniket11@gmail.com>
+Date:   Wed Nov 20 16:14:42 2019 +0530
+
+    Add a.txt and b.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git add c.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "c.txt done"
+[master 2a3dc43] c.txt done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 c.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git remore add add origin https://github.com/Aniket0624/git_projects.git
+git: 'remore' is not a git command. See 'git --help'.
+
+The most similar command is
+        remote
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git remote add origin https://github.com/Aniket0624/git_projects.git
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git push origin master
+Username for 'https://github.com': Aniket0624
+Password for 'https://Aniket0624@github.com':
+Counting objects: 7, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 504 bytes | 50.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Aniket0624/git_projects.git
+ * [new branch]      master -> master
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ mkdir git_sample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd git_sample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ touch t.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ gti add t.txt
+
+Command 'gti' not found, did you mean:
+
+  command 'ti' from deb ticgit
+  command 'gsi' from deb gambc
+  command 'bti' from deb bti
+  command 'gri' from deb gri
+  command 'gtg' from deb gtg
+  command 'gtf' from deb xserver-xorg-core
+  command 'gli' from deb ruby-gli
+  command 'gt5' from deb gt5
+  command 'git' from deb git
+  command 'gt' from deb genometools
+  command 'gtv' from deb smpeg-gtv
+  command 'gmi' from deb gmailieer
+  command 'ghi' from deb ghi
+
+Try: sudo apt install <deb name>
+
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ git add t.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ git commit -m "t. txt done"
+[master 8642171] t. txt done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 git_sample_project_2/t.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd git_sample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ git remote add https://github.com/Aniket0624/git_projects.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ git push origin master
+Username for 'https://github.com': Aniket0624
+Password for 'https://Aniket0624@github.com':
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 381 bytes | 19.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/Aniket0624/git_projects.git
+   2a3dc43..8642171  master -> master
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/git_sample_project_2$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ gti pull origin master
+
+Command 'gti' not found, did you mean:
+
+  command 'ghi' from deb ghi
+  command 'gt' from deb genometools
+  command 'gmi' from deb gmailieer
+  command 'gtf' from deb xserver-xorg-core
+  command 'gsi' from deb gambc
+  command 'gli' from deb ruby-gli
+  command 'gtv' from deb smpeg-gtv
+  command 'ti' from deb ticgit
+  command 'gt5' from deb gt5
+  command 'gri' from deb gri
+  command 'git' from deb git
+  command 'bti' from deb bti
+  command 'gtg' from deb gtg
+
+Try: sudo apt install <deb name>
+
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git pull origin master
+From https://github.com/Aniket0624/git_projects
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd..
+cd..: command not found
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike$ cp  git_drill_part_1.txt git_sample_project
+aniket@ANIKET:/mnt/c/Users/anike$ cd gitssample_project
+-bash: cd: gitssample_project: No such file or directory
+aniket@ANIKET:/mnt/c/Users/anike$ cd gitsample_project
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git clone git@github.com:whatever .
+fatal: destination path '.' already exists and is not an empty directory.
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git clone git@github.com:git_sample_project_2
+fatal: destination path 'git_sample_project_2' already exists and is not an empty directory.
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git clone https://github.com/Aniket0624/git_projects.git gitsample_project
+Cloning into 'gitsample_project'...
+remote: Enumerating objects: 10, done.
+remote: Counting objects: 100% (10/10), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 10 (delta 2), reused 9 (delta 1), pack-reused 0
+Unpacking objects: 100% (10/10), done.
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ mv gitsample_project gitsample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd gitsample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/gitsample_project_2$ touch d.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/gitsample_project_2$ git add d.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/gitsample_project_2$ git commi -m "d.txt done"
+git: 'commi' is not a git command. See 'git --help'.
+
+The most similar commands are
+        commit
+        column
+        config
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/gitsample_project_2$ git commit -m"d.txt done"
+[master cb37936] d.txt done
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project/gitsample_project_2$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ ls
+a.txt  b.txt  c.txt  gitsample_project_2  x.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git checkout master
+D       git_sample_project_2/t.txt
+Already on 'master'
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git rm -r git_sample_project_2
+rm 'git_sample_project_2/t.txt'
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git commit -m "deleted"
+[master 31f1614] deleted
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 git_sample_project_2/t.txt
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git push origin master
+Username for 'https://github.com': Aniket0624
+Password for 'https://Aniket0624@github.com':
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 255 bytes | 63.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Aniket0624/git_projects.git
+   8642171..31f1614  master -> master
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd..
+cd .cd..: command not found
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike$ git clone git@github.com: git_projects
+Cloning into 'git_projects'...
+The authenticity of host 'github.com (13.234.176.102)' can't be established.
+RSA key fingerprint is SHA256:nThbg6kXUpJWGl7E1IGOCspRomTxdCARLviKw6E5SY8.
+Are you sure you want to continue connecting (yes/no)? y
+Please type 'yes' or 'no': yes
+Warning: Permanently added 'github.com,13.234.176.102' (RSA) to the list of known hosts.
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+aniket@ANIKET:/mnt/c/Users/anike$ mv git_projects git_sample_project_2
+mv: cannot stat 'git_projects': No such file or directory
+aniket@ANIKET:/mnt/c/Users/anike$ git clone https://github.com/Aniket0624/git_projects.git git_sample_project_2
+Cloning into 'git_sample_project_2'...
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (6/6), done.
+remote: Total 11 (delta 3), reused 9 (delta 1), pack-reused 0
+Unpacking objects: 100% (11/11), done.
+aniket@ANIKET:/mnt/c/Users/anike$ cd git_sample_project_2
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ touch d.txt
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ git add d.txt
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ git commit -m "d.txt added"
+[master 907f4ab] d.txt added
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d.txt
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ git push origin master
+Username for 'https://github.com': Aniket0624
+Password for 'https://Aniket0624@github.com':
+Counting objects: 2, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 232 bytes | 58.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Aniket0624/git_projects.git
+   31f1614..907f4ab  master -> master
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ cd gitsample_project
+-bash: cd: gitsample_project: No such file or directory
+aniket@ANIKET:/mnt/c/Users/anike/git_sample_project_2$ cd ..
+aniket@ANIKET:/mnt/c/Users/anike$ cd gitsample_project
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git pill origin master
+git: 'pill' is not a git command. See 'git --help'.
+
+The most similar command is
+        pull
+aniket@ANIKET:/mnt/c/Users/anike/gitsample_project$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (1/1), done.
+remote: Total 2 (delta 1), reused 2 (delta 1), pack-reused 0
+Unpacking objects: 100% (2/2), done.
+From https://github.com/Aniket0624/git_projects
+ * branch            master     -> FETCH_HEAD
+   31f1614..907f4ab  master     -> origin/master
+Updating 31f1614..907f4ab
+Fast-forward
+ d.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 d.txt
